@@ -11,7 +11,7 @@ const Document = ({ children }) => {
       </head>
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: children }}></div>
-        <script defer src="main.js"></script>
+        <script defer src="/build/main.js"></script>
       </body>
     </html>
   );

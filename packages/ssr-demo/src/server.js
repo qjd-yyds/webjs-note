@@ -4,9 +4,11 @@ require('@babel/register')({
 const express = require('express');
 const appRouter = require('./appRouter');
 const app = express();
-app.use(appRouter);
 // 静态映射
-app.use(express.static('build'));
+app.use('/build', express.static('build'));
+// 匹配到/走这个路由
+app.use('/', appRouter);
+
 app.listen(3000, () => {
   console.log('express is listen on port 3000');
 });

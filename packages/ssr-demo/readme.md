@@ -20,6 +20,7 @@
 2. 服务端返回的数据这个时候还是空的
 3. 服务端继续渲染 appjs 里的内容
 4. 通过renderToString 渲染后的app字符串传入 renderToStaticMarkup静态生成的ducument中
+5. 使用hydrate 优化
 
 ```js
 ReactDomServer.renderToString; // 动态渲染部分root的子元素
