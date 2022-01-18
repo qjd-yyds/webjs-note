@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三列中间自适应布局</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        background-color: rgb(211, 141, 49);
+      }
+      li {
+        display: inline-block;
+        padding: 0 10px;
+        color: #fff;
+        cursor: pointer;
+      }
+      li:hover {
+        background-color: rgba(202, 233, 116, 0.5);
+      }
+      /* margin 负值法 */
+      .demo1 {
+        overflow: hidden;
+      }
+      .demo1 .left {
+        float: left;
+        width: 200px;
+        background-color: aqua;
+        margin-left: -100%;
+      }
+      .demo1 .middle {
+        background-color: bisque;
+        float: left;
+        width: 100%;
+      }
+      .demo1 .middle .wrap {
+        margin: 0 200px;
+      }
+      .demo1 .right {
+        float: left;
+        width: 200px;
+        margin-left: -200px;
+        background-color: brown;
+      }
+      /* 自身浮动法 */
+      .demo2 {
+        overflow: hidden;
+      }
+      .demo2 .left {
+        float: left;
+        width: 200px;
+        background-color: aqua;
+      }
+      .demo2 .middle {
+        background-color: bisque;
+        width: 100%;
+        margin: 0 200px;
+      }
+      .demo2 .right {
+        float: right;
+        width: 200px;
+        background-color: brown;
+      }
+      /* 绝对定位法 */
+      .demo3 {
+        overflow: hidden;
+        position: relative;
+      }
+      .demo3 .left {
+        position: absolute;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+      }
+      .demo3 .middle {
+        background-color: bisque;
+        height: 200px;
+        margin: 0 200px;
+      }
+      .demo3 .right {
+        width: 200px;
+        right: 0;
+        top: 0;
+        height: 200px;
+        position: absolute;
+        background-color: brown;
+      }
+      /* flex */
+      .demo4 {
+        display: flex;
+      }
+      .demo4 .left {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+      }
+      .demo4 .middle {
+        background-color: bisque;
+        height: 200px;
+        flex: 1;
+      }
+      .demo4 .right {
+        width: 200px;
+        height: 200px;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <header>三列中间自适应布局</header>
+    </h1>
+    <section>
+      <nav>
+        <ul>
+          <li>margin 负值法</li>
+          <li>自身浮动法</li>
+          <li>绝对定位法</li>
+          <li>flex</li>
+        </ul>
+      </nav>
+      <main>
+        <h2>margin 负值法</h2>
+        <div class="demo1">
+          <div class="middle">
+            <div class="wrap">我在中间</div>
+          </div>
+          <div class="left">我在左侧</div>
+
+          <div class="right">我在右侧</div>
+        </div>
+        <h3>自身浮动法</h3>
+        <div class="demo2">
+          <div class="left">我在左侧</div>
+          <div class="right">我在右侧</div>
+          <div class="middle">我在中间</div>
+        </div>
+        <h3>绝对定位法</h3>
+        <div class="demo3">
+          <div class="left">我在左侧</div>
+          <div class="middle">我在中间</div>
+          <div class="right">我在右侧</div>
+        </div>
+        <h3>flex</h3>
+        <div class="demo4">
+          <div class="left">我在左侧</div>
+          <div class="middle">我在中间</div>
+          <div class="right">我在右侧</div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
