@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Document = ({ children }) => {
+const Document = ({ children, data }) => {
   return (
     <html lang="en">
       <head>
@@ -11,8 +11,10 @@ const Document = ({ children }) => {
       </head>
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: children }}></div>
+        <script dangerouslySetInnerHTML={{ __html: `window.APP_DATA=${JSON.stringify(data)}` }}></script>
         <script defer src="/build/main.js"></script>
       </body>
+      {/* 实现数据共享 */}
     </html>
   );
 };

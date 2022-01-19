@@ -8,6 +8,7 @@
     "build-client": "webpack --config ./webpack.config.js"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "express": "^4.17.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -15,9 +16,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.8",
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-react": "^7.16.7",
     "@babel/register": "^7.16.9",
+    "@babel/runtime": "^7.16.7",
     "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.15",

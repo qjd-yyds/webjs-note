@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
-
+import routes from '../core/routes';
 import Home from './Home';
 import NotFound from './NotFound';
 import User from './User';
@@ -23,9 +23,16 @@ export default function App() {
         </li>
       </ul>
       <Routes>
-        <Route path="/" exact element={<Home />}></Route>
-        <Route path="/user" element={<User />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
+        {routes.map((item) => {
+          return (
+            <Route
+              key={item.path}
+              path={item.path}
+              exact={item.path === '/'}
+              element={<item.component></item.component>}
+            ></Route>
+          );
+        })}
       </Routes>
     </div>
   );

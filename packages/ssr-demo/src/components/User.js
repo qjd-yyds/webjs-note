@@ -1,6 +1,6 @@
 import React from 'react';
-
-export default function User() {
+import { fetchUser } from '../core/api';
+function User() {
   return (
     <main>
       <h1>User</h1>
@@ -14,3 +14,6 @@ export default function User() {
     </main>
   );
 }
+User.getData = fetchUser;
+
+export default User;
