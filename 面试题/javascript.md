@@ -131,3 +131,90 @@ function myInstanceof(L, R) {
 }
 console.log(myInstance({}, Object)); // true
 ```
+
+## 为什么 typeof null 为 object
+
+在 javascript 中不同的对象都是二进制存储的，如果二进制前三位是 000 那么 js 就判断他是 object 类型，null 的二进制全是 0，所以判断为 object
+这个 bug 是 js 诞生时产生的 bug
+
+- 000 对象
+- 010 双精度类型
+- 100 字符串类型
+- 110 布尔类型
+
+## == 和===的区别
+
+=== 是严格相等，比较值和类型
+
+== 是非严格相等，比较规则
+
+- Null == Undefind true
+- String == Number 先把 string 转成 number 再比较大小
+- Boolean == Number 先吧 Boolean 转成 number 再比较
+- Object == String,Number,Symbol =>Object 转换成原始类型
+
+## 手写 call apply bind
+
+- call 的实现
+
+```js
+Function.prototype.call = function (context) {
+  // 首先判断他是不是一个函数
+  if (typeof this !== 'function') {
+    throw new TypeError('not a function');
+  }
+  // 存储当前的this指向,如果当前没传入默认指向window
+  context = context || window;
+  // 存储当前的函数
+  context.fn = this;
+  // 截取传入的参数，保存
+  const args = Array.from(arguments).slice(1);
+  // 执行这个方法
+  const result = context.fn(...args);
+  delete context.fn;
+  return result;
+};
+```
+
+- apply 的实现
+
+```js
+Function.prototype.apply = function (context) {
+  if (typeof this !== 'function') {
+    throw new TypeError('not a function');
+  }
+  context = context || window;
+  context.fn = this;
+  let result;
+  // 传入的是一个数组所以判断是否穿参
+  if (arguments[1]) {
+    result = context.fn(...arguments[1]);
+  } else {
+    result = context.fn();
+  }
+  delete context.fn;
+  return result;
+};
+```
+
+- 实现 bind
+
+```js
+Function.prototype.bind = function (context) {
+  if (typeof this !== 'function') {
+    throw new TypeError('必须是一个function');
+  }
+  const _this = this; // 需要被bind调用的函数
+  const args = Array.from(arguments).slice(1);
+  // bind需要返回一个函数
+  return function fn() {
+    // 首先判断这个fn是不是new实例化的
+    if (this instanceof fn) {
+      // 当前是new的
+      return new _this(...args, ...arguments);
+    } else {
+      return _this.apply(context, args.concat(...arguments));
+    }
+  };
+};
+```
