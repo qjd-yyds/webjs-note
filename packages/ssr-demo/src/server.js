@@ -12,5 +12,5 @@ app.use('/build', express.static('build'));
 app.use('/', appRouter);
 
 app.listen(3000, () => {
-  console.log('express is listen on port 3000');
+  console.log('express is listen on port http://localhost:3000');
 });

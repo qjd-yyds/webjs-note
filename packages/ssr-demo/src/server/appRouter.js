@@ -6,6 +6,7 @@ import React from 'react';
 import { StaticRouter } from 'react-router-dom/server';
 import routes from '../core/routes';
 import { matchPath } from 'react-router-dom';
+import Context from '../components/propsContext';
 const router = express.Router();
 router.get('*', async (req, res) => {
   let data = {};
@@ -28,9 +29,11 @@ router.get('*', async (req, res) => {
   // 组件渲染
   const appString = ReactDomServer.renderToString(
     // 使用StaticRouter 无状态路由 解析服务端的路由
-    <StaticRouter location={req.url} context={data}>
-      <App></App>
-    </StaticRouter>
+    <Context.Provider value={{ staticContext: data }}>
+      <StaticRouter location={req.url}>
+        <App></App>
+      </StaticRouter>
+    </Context.Provider>
   );
   // 渲染静态部分
   const html = ReactDomServer.renderToStaticMarkup(<Document data={data}>{appString}</Document>);
