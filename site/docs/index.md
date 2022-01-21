@@ -5,7 +5,7 @@ heroAlt: Logo image
 heroText: 阿客的修仙之旅
 tagline: Hero subtitle
 actionText: 快速修仙
-actionLink: /guide/
+actionLink: /interview/js
 features:
   - title: 手撕笔试题
     details: 此乃js中的八股文，练成后可斗气化马
