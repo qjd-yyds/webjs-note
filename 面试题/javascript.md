@@ -208,7 +208,7 @@ Function.prototype.bind = function (context) {
   const args = Array.from(arguments).slice(1);
   // bind需要返回一个函数
   return function fn() {
-    // 首先判断这个fn是不是new实例化的
+    // 首先判断这个fn是不是new实例化的，新创建的实例需要吧prototype添加到_this.proptotype
     if (this instanceof fn) {
       // 当前是new的
       return new _this(...args, ...arguments);
@@ -218,3 +218,40 @@ Function.prototype.bind = function (context) {
   };
 };
 ```
+
+## 字面量创建对象和 new 创建的对象有什么区别
+
+字面量创建的对象更加方便，不需要像 new 创建的对象一个个创建 key，方便阅读，
+不需要作用域解析，速度更加快
+
+## 实现一个 new
+
+```js
+function myNew(fn, ...args) {
+  // 创建一个新对象
+  let obj = {};
+  // 改变对象的原型指向
+  obj.__proto__ = fn.prototype;
+
+  let result = fn.apply(obj, args);
+  return result instanceof Object ? result : obj;
+}
+```
+
+## 什么是作用域
+
+变量和函数可执行的范围称为作用域
+作用域是一套规则，确定了在何处和如何查找这些变量，如果查找的目的是赋值，那么会进行 LHS 查询，如果是获取值会进行 RHS 查找，赋值操作符会进行 LHS 查找，=操作符或者函数调用时传入的值会触发关联作用域的赋值操作。
+
+js 引擎在代码执行前对其编译，在这个阶段 var a = 2 会被分解成两个独立步骤
+
+- var a 在其作用域声明变量，会在最开始的阶段，代码执行前进行
+- a = 2 会进行 LHS 的查询变量 a，并对其进行赋值
+
+LHS 查询和 RHS 查询会在当前作用域执行,如果有需要会像上一层作用域继续查找目标标识符，这样每次向上执行最后抵达全局作用域（顶层），无论有没有找到都会停止
+
+不成功的 RHS 引用会报 ReferenceError 异常，不成功的 LHS 引用会隐式创建一个全局变量，把当前 LHS 的目标引用作为标识符。严格模式下抛出 ReferenceError
+
+## 执行栈 执行上下文
+
+先进后出，当进入一个执行环境就会创建他的执行上下文，然后压栈，当执行完成后会销毁他的上下文，进行弹栈，栈底永远是全局环境的上下文，栈顶是当前正在执行的环境上下文，浏览器关闭的时候全局执行上下文才会弹栈
