@@ -1,8 +1,8 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /logo.jfif
 heroAlt: Logo image
-heroText: 阿客的修仙之旅
+heroText: js修仙旅途
 tagline: Hero subtitle
 actionText: 快速修仙
 actionLink: /interview/js
