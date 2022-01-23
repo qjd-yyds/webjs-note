@@ -1,0 +1,34 @@
+.swraper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 0.9rem;
+  display: flex;
+  background-image: linear-gradient(0deg, rgba(30, 11, 11, 0) 19%, rgba(0, 0, 0, 0.31));
+}
+
+.search {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url('../../public/search.png');
+  background-repeat: no-repeat;
+  background-size: 0.27rem 0.29rem;
+  border-radius: 0.12rem;
+  background-position: 0.14rem center;
+  margin: 0.13rem 0rem 0 0.3rem;
+  height: 0.26rem;
+  font-size: 0.26rem;
+  line-height: 0.5rem;
+  height: 0.5rem;
+  padding-left: 0.45rem;
+  color: #6b6b6b;
+}
+.user {
+  background-image: url('../../public/user.png');
+  background-repeat: no-repeat;
+  background-size: 0.58rem 0.58rem;
+  background-position: 0 center;
+  width: 0.7rem;
+  margin: 0.2rem;
+}

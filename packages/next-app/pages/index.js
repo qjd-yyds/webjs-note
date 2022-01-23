@@ -1,19 +1,19 @@
-import { useEffect } from 'react';
-
-export default function Home({ state, setstate }) {
-  console.log(process.env.NEXT_PUBLIC_SERVER_HOST);
-  useEffect(() => {
-    fetch('http://localhost:3000/api/course', { method: 'POST' })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      });
-  }, []);
+import Head from 'next/head';
+import HomeHead from 'components/p_home/HomeHead';
+import Talk from 'components/p_home/Talk';
+import Recomment from 'components/p_home/Recommend';
+export default function Home() {
   return (
-    <div>
-      <h1>你好next</h1>
-      <span>{state}</span>
-      <button onClick={() => setstate(++state)}>+1</button>
-    </div>
+    <>
+      <Head>
+        <title>有道精品课</title>
+      </Head>
+      <main>
+        <h3>有道精品课首页</h3>
+        <HomeHead></HomeHead>
+        <Talk></Talk>
+        <Recomment></Recomment>
+      </main>
+    </>
   );
 }
