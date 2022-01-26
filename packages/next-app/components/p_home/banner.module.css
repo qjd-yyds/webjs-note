@@ -1,0 +1,8 @@
+.warp {
+  position: relative;
+}
+.image {
+}
+.mask {
+  position: absolute;
+}
