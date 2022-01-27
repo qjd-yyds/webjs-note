@@ -1,0 +1,41 @@
+.warp {
+  font-size: 0.12rem;
+  width: 6.9rem;
+  height: 3.94rem;
+  margin: -2.16rem auto 0;
+  box-shadow: 0 0.06rem 0.15rem 0 hsl(0deg 0% 88% / 41%);
+  overflow: hidden;
+}
+.warp .nav {
+  display: flex !important;
+  flex-wrap: wrap;
+  padding: 0.16rem;
+}
+.warp .nav .nav_item {
+  margin: 0.32rem 0.30rem 0.12rem 0;
+}
+.warp .nav .nav_item:nth-child(4n) {
+  margin-right: 0;
+}
+.warp .nav .nav_item .text {
+  width: 1.38rem;
+  font-size: 0.24rem;
+  color: #393939;
+  line-height: 0.26rem;
+  display: inline-block;
+  width: 1.38rem;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 0.12rem;
+  text-align: center;
+}
+.content {
+}
+.course {
+  margin: 0.32rem 0.36rem 0.12rem 0;
+}
+.warp .nav img {
+  width: 0.64rem;
+  height: 0.64rem;
+  margin: 0 auto;
+}

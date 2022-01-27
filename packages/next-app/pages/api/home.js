@@ -87,62 +87,62 @@ export default (req, res) => {
       // 一级分类入口
       fixedEntries: [
         {
-          img: '/img/image(1).png',
+          img: '/img/image (1).png',
           id: 1001,
           title: '小学'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (2).png',
           id: 1002,
           title: '初中'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (4).png',
           id: 1003,
           title: '高中'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (5).png',
           id: 1004,
           title: '四六级'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (8).png',
           id: 1005,
           title: '实用英语'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (9).png',
           id: 1006,
           title: '考研'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (10).png',
           id: 1007,
           title: '兴趣技能'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (11).png',
           id: 1008,
           title: '逻辑英语'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (30).png',
           id: 1009,
           title: '专四专八'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (31).png',
           id: 1010,
           title: '教师资格'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (32).png',
           id: 1011,
           title: '雅思托福'
         },
         {
-          img: '/img/image(1).png',
+          img: '/img/image (33).png',
           id: 1012,
           title: '编程开发'
         }

@@ -1,0 +1,42 @@
+.header {
+  margin: 0.68rem auto 0.4rem;
+  overflow: hidden;
+  width: 92%;
+  color: #afafaf;
+}
+.header a {
+  float: right;
+  line-height: 0.7rem;
+  position: relative;
+  margin-right: 0.4rem;
+}
+.header a::after {
+  border-left: 0.14rem solid #afafaf;
+  border-right: 0.14rem solid transparent;
+  border-top: 0.1rem solid transparent;
+  border-bottom: 0.1rem solid transparent;
+  width: 0;
+  height: 0;
+  content: '';
+  top: 50%;
+  transform: translateY(-50%);
+  right: -0.35rem;
+  position: absolute;
+}
+.title {
+  float: left;
+  height: 0.74rem;
+  border-left: 0.08rem solid #fb4a3e;
+  padding-left: 0.22rem;
+}
+.title h4 {
+  margin: 0 0 0.05rem;
+  font-size: 0.36rem;
+  line-height: 0.42rem;
+  color: #393939;
+}
+.title h5 {
+  font-size: 0.18rem;
+  line-height: 0.2rem;
+  margin: 0;
+}
