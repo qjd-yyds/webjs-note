@@ -1,0 +1,119 @@
+.card {
+  display: block;
+  margin: 0 0.36rem;
+  padding: 0.4rem 0;
+  color: #949494;
+}
+.categoryTag {
+  position: relative;
+  display: inline-block;
+  min-width: 0.7rem;
+  height: 0.36rem;
+  padding: 0 0.08rem;
+  margin: 0 0.2rem 0 0.05rem;
+  font-size: 0.22rem;
+  line-height: 0.36rem;
+  color: #fff;
+  text-align: center;
+  background-color: #838d98;
+  border-radius: 0 0.06rem 0.06rem;
+}
+.categoryTag::before,
+.categoryTag::after {
+  position: absolute;
+  content: '';
+  left: -0.1rem;
+  top: 0;
+  width: 0.1rem;
+  height: 0.1rem;
+}
+.categoryTag::before {
+  background-color: #838d98;
+}
+.categoryTag::after {
+  background-color: #fff;
+  border-radius: 0 50% 0 0;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 0.34rem;
+  color: #36404a;
+}
+.title,
+.categoryTag {
+  /* vertical-align: middle; */
+}
+.time {
+  font-size: 0.26rem;
+  margin: 0.12rem 0 0.28rem 0.02rem;
+}
+
+.lessonNum {
+  margin-left: 0.2rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.22rem;
+}
+.teacherCont {
+  margin-left: 0.09rem;
+}
+.teacherBox {
+  display: inline-block;
+  margin-right: 0.36rem;
+  text-align: center;
+  max-width: 0.88rem;
+  overflow: hidden;
+}
+.teacherBox:last-child {
+  margin-right: 0;
+}
+.imgWrapper {
+  position: relative;
+  width: 0.48rem;
+  height: 0.48rem;
+  margin: 0 auto 0.09rem;
+}
+.avatar {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+.avatarBorder {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 50%;
+  top: 0;
+}
+/* 价格优惠数量 */
+.promoCont {
+  text-align: right;
+}
+.promoCont .price {
+  position: relative;
+  margin-left: 0.16rem;
+  font-size: 0.36rem;
+  font-weight: bold;
+  line-height: 1;
+  color: #ff4c38;
+}
+.promoCont .price>.ico {
+  margin-right: 0.08rem;
+  font-size: 0.24rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.promoCont .deleted {
+  font-size: 0.26rem;
+  text-decoration: line-through;
+}
+.promoCont .desc {
+  margin-top: 0.17rem;
+}

@@ -17,7 +17,7 @@ async function getConfig() {
     title: 'bystander的文档',
     description: '我的技术文档',
     lang: 'en-US',
-    base: '/', // 部署的子路径,
+    base: '/blog/', // 部署的子路径,
     themeConfig: {
       algolia: {
         apiKey: '',
