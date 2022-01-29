@@ -1,1 +1,2 @@
-export const SERVER = 'http://localhost:3000'
+console.log(process.env.NODE_ENV);
+export const SERVER = process.env.NEXT_PUBLIC_BASE_API;

@@ -35,7 +35,7 @@ const Recomment = () => {
       {recommend.list.map((item) => (
         <CourseCard key={item.id} data={item}></CourseCard>
       ))}
-      <LoadMore onReachBottom={fetchRecommend} hasMore={recommend.hasMore}></LoadMore>
+      <LoadMore customNoMoreText="我是有底线的~~" onReachBottom={fetchRecommend} hasMore={recommend.hasMore}></LoadMore>
     </section>
   );
 };

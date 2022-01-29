@@ -1,0 +1,10 @@
+.loadMore {
+  width: 100%;
+  clear: both;
+}
+.loadText {
+  margin: 0.2rem 0 0.1rem;
+  font-size: 0.32rem;
+  color: #b8b8b8;
+  text-align: center;
+}

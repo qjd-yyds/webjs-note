@@ -1,0 +1,14 @@
+.suggestItem {
+  padding: 0.33rem 0;
+  font-size: 0.33rem;
+  color: #36404a;
+  letter-spacing: 0;
+}
+.suggestItem::after {
+  /* 有些手机颜色不渲染，使用color来做兼容 */
+  color: #ebebeb; 
+  border-bottom: solid 1px #ebebeb;
+}
+.container {
+  margin: -0.27rem 0.36rem 0;
+}

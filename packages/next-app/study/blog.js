@@ -12,9 +12,8 @@ const Blog = ({ posts }) => {
 };
 export async function getStaticProps() {
   // 服务启动的时候才能访问到
-  const res = await fetch('http://localhost:3000/api/posts');
+  const res = await fetch('/api/posts');
   const data = await res.json();
-  console.log(data);
   return {
     props: {
       posts: data

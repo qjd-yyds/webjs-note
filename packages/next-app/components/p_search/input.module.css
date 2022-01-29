@@ -1,0 +1,57 @@
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  height: 1.69rem;
+  padding: 0.37rem 0.36rem 0.36rem;
+  overflow: hidden;
+  font-size: 0.48rem;
+  background: linear-gradient(-180deg, #fff 84%, rgba(255, 255, 255, 0.6) 100%);
+  z-index: 1;
+}
+.search {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.23rem 0.3rem 0.19rem 0;
+  font-weight: bold;
+  color: #36404a;
+  letter-spacing: 0;
+  caret-color: #6a7eff;
+  -webkit-appearance: none;
+  /* 取消高亮 */
+  -webkit-tap-highlight-color: transparent;
+}
+.search::-webkit-input-placeholder {
+  color: #36404a;
+}
+/* 清除icon */
+.search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  display: none;
+}
+.formCont {
+  position: relative;
+}
+.formCont::after {
+  border-bottom-color: 1px solid #36404a;
+}
+.empty.formCont::after {
+  border-bottom-color: 1px solid #ebebeb;
+}
+.clean {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0.56rem;
+  height: 0.56rem;
+  margin: -0.28rem -0.14rem 0 0;
+  color: #dcdcdc;
+  background-image: url('/img/clear.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.28rem 0.28rem;
+  border: 0;
+}

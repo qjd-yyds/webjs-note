@@ -17,10 +17,41 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+li {
+  list-style-type: none;
+}
 h1 {
   color: green;
+}
+/* clears the 'X' from Internet Explorer */
+input[type='search']::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type='search']::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+button {
+  padding: 0;
+  margin: 0;
+  background-color: inherit;
+  border: 0;
+  outline: none;
 }
 .home-banner .slick-dots {
   position: absolute;
@@ -51,8 +82,21 @@ h1 {
 }
 
 /* 一像素 下边框 */
-.border-b-1px {
+.border-b-1px,
+.border-all-1px {
   position: relative;
+}
+.border-all-1px::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.09rem;
 }
 .border-b-1px::after {
   position: absolute;
@@ -68,4 +112,15 @@ h1 {
   .border-b-1px::after {
     transform: scaleY(0.5);
   }
+  .border-all-1px {
+    border: none !important;
+  }
+  .border-all-1px::after {
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: left top;
+    border-radius: 0.18rem;
+  }
 }
+  
