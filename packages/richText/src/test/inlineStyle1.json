@@ -1,0 +1,15 @@
+{
+    "type": "document",
+    "nodes": [
+        {
+            "type": "paragraph",
+            "chars": [
+                { "text": "a", "style": { "fontWeight": "bold", "color": "red" } },
+                { "text": "b", "style": { "fontWeight": "bold", "color": "red" } },
+                { "text": "c", "style": { "fontWeight": "bold", "color": "red" } },
+                { "text": "d", "style": { "fontWeight": "bold", "color": "red" } },
+                { "text": "e", "style": { "fontWeight": "bold", "color": "red" } },
+            ]
+        }
+    ]
+}

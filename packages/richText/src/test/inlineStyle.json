@@ -1,0 +1,14 @@
+{
+    "type": "document",
+    "nodes": [
+        {
+            "type": "paragraph",
+            "chars": [
+                { "text": "a", "style": { "fontWeight": "bold", "color": "red" } },
+                { "text": "b", "style": { "fontStyle": "italic", "color": "green" } },
+                { "text": "c" }
+            ],
+            "style": { "textAlign": "center" }
+        }
+    ]
+}

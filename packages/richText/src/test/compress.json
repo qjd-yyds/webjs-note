@@ -1,0 +1,14 @@
+{
+    "type": "document",
+    "nodes":[
+        {
+            "type": "paragraph",
+            "segments": [
+                { "text": "abcde", "style": { "color": "red" } },
+                { "text": "fghi" },
+                { "text": "jk", "style": { "fontWeight": "bold", "color": "green" } },
+                { "text": "lmn", "style": { "fontWeight": "bold", "color": "red" } }
+            ]
+        }
+    ]
+}

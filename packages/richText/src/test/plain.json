@@ -1,0 +1,9 @@
+{
+    "type": "document",
+    "nodes": [
+        {
+            "type": "paragraph",
+            "text": "this is a plain text"
+        }
+    ]
+}

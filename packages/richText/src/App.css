@@ -1,0 +1,23 @@
+.intLink {
+    cursor: pointer;
+}
+
+img.intLink {
+    border: 0;
+    width: 24px;
+    height: 24px;
+    margin: 5;
+}
+
+.toolBar1 select {
+    font-size: 10px;
+    margin: 5px;
+}
+
+.editArea {
+    width: 540px;
+    height: 200px;
+    border: 1px #000000 solid;
+    padding: 12px;
+    overflow: scroll;
+}

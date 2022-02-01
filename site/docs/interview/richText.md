@@ -41,3 +41,19 @@ window.getSelection();
 - selection.collapseToEnd() 取消当前选区，光标移动到终点
 ### execCommand
 操作可编辑内容区域影响slection
+## 事件驱动思想和数据驱动思想
+### 事件驱动
++ 外部发出的可以被软件识别的处理动作
++ 通常是异步的如dom事件 ui事件 焦点事件 文本事件 键盘事件 剪贴板事件 拖拽事件
++ 事件捕获 事件冒泡 事件代理
++ 用户交互用事件修改页面： 设计dom监听dom事件==>调用后修改dom jq操作
+### 数据驱动
++ MVC 
+    - view 界面
+    - controller 逻辑
+    - model 数据
++ MVVM
+view层和model层不发生联系，通过viewmodel发生关系 viewmodel<==>model
+    - view
+    - viewmodel
+    - model

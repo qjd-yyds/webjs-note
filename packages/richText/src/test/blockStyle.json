@@ -1,0 +1,14 @@
+{
+    "type": "document",
+    "nodes": [
+        {
+            "type": "paragraph",
+            "text": "this is a plain text"
+        },
+        {
+            "type": "paragraph",
+            "text": "this is a text with block style",
+            "style": { "textAlign": "center" }
+        }
+    ]
+}

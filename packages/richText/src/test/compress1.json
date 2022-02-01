@@ -1,0 +1,18 @@
+{
+    "type": "document",
+    "nodes": [
+        {
+            "type": "paragraph",
+            "text": "abcdefghijklmn",
+            "inline": [
+                { "type": "bold", "value": true, "from": 0, "to": 4 },
+                { "type": "bold", "value": true, "from": 6, "to": 13 },
+                { "type": "color", "value": "red", "from": 0, "to": 4 },
+                { "type": "color", "value": "red", "from": 6, "to": 8 },
+                { "type": "color", "value": "green", "from": 9, "to": 10 },
+                { "type": "color", "value": "red", "from": 11, "to": 13 }
+            ],
+            "style": { "textAlign": "center" }
+        }
+    ]
+}
