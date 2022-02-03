@@ -1,11 +1,13 @@
 ---
-home: true
-heroImage: /logo.jfif
+home: true # 设置成主页
+heroImage: /images/logo.jpeg
 heroAlt: Logo image
-heroText: js修仙旅途
-tagline: Hero subtitle
-actionText: 快速修仙
-actionLink: /interview/js
+heroText: 修仙难！难于上青天！
+tagline: 筑基期、结丹期、元婴期、化神期、洞虚期、渡劫期
+actions:
+  - text: 快速修仙
+    link: /interview/js
+    type: primary
 features:
   - title: 手撕笔试题
     details: 此乃js中的八股文，练成后可斗气化马
