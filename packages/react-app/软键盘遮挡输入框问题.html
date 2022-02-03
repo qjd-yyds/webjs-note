@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" />
+<script>
+{
+    let input = document.querySelector("input");
+    let oldY = 0;
+    input.onfocus = ()=>{
+        let startTop = input.getBoundingClientRect().top;
+        setTimeout(()=>{
+            let nowTop = input.getBoundingClientRect().top;
+            if(startTop - nowTop > 10){
+                return;
+            }
+            if(nowTop > window.innerHeight/2){
+                oldY = nowTop -  window.innerHeight/2 - input.offsetHeight - 10;//移动距离
+                input.style.transform = "translateY(-"+oldY+"px)";
+            }
+        },400);
+    };
+    input.onblur = ()=>{
+        if(oldY){
+            input.style.transform = "translateY("+0+"px)";
+        }
+    };
+}
+</script>    
+</body>
+</html>

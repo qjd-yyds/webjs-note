@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            font: 14px/30px "宋体";
+            border-bottom: 1px solid #000;
+        }
+        .page {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+        #mask {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 50vw;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        #box {
+            position: absolute;
+            top: 25%;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: red;
+            overflow: auto;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <ul id="list"></ul>
+</div>
+<div id="mask">
+    <div id="box">
+        <ul id="list2"></ul>
+    </div>    
+</div>
+<script>
+{
+    let list = document.querySelector("#list");
+    let list2 = document.querySelector("#list2");
+    let mask = document.querySelector("#mask");
+    let render = ()=>{
+        let innner = "";
+        for(let i = 0; i < 50; i++){
+            innner += `<li>这是第${i}个li</li>`;
+        }
+        return innner;
+    };
+    list.innerHTML = render();
+    list2.innerHTML = render();
+}
+</script>
+</body>
+</html>
