@@ -38,6 +38,18 @@ export default defineUserConfig<DefaultThemeOptions>({
           {
             text: 'js',
             link: '/interview/js.md'
+          },
+          {
+            text: '作用域',
+            link: '/interview/socpe.md'
+          },
+          {
+            text: '闭包',
+            link: '/interview/closure.md'
+          },
+          {
+            text: '笔试题',
+            link: '/interview/written.md'
           }
         ]
       }
@@ -47,7 +59,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     [
       '@snippetors/vuepress-plugin-code-copy',
       {
-        align: 'top',
+        align: 'bottom',
         successText: '复制成功！'
       }
     ]
