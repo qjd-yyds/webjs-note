@@ -1,5 +1,5 @@
 import { defineUserConfig } from 'vuepress';
-
+import { navbar, slidebar } from './configs';
 import type { DefaultThemeOptions } from 'vuepress';
 
 export default defineUserConfig<DefaultThemeOptions>({
@@ -18,46 +18,8 @@ export default defineUserConfig<DefaultThemeOptions>({
     repo: 'https://github.com/qjd-yyds/webjs-note',
     backToHome: '返回首页',
     notFound: ['你不可以这样做！', '你已经走火入魔了？'],
-    navbar: [
-      {
-        text: 'linux入门',
-        children: [
-          {
-            text: 'shell脚本',
-            link: '/linux/shell.md'
-          }
-        ]
-      },
-      {
-        text: '面试题',
-        children: [
-          {
-            text: 'css',
-            link: '/interview/css.md'
-          },
-          {
-            text: 'js',
-            link: '/interview/js.md'
-          },
-          {
-            text: '作用域',
-            link: '/interview/socpe.md'
-          },
-          {
-            text: '闭包',
-            link: '/interview/closure.md'
-          },
-          {
-            text: '深入理解js中的对象',
-            link: '/interview/object.md'
-          },
-          {
-            text: '笔试题',
-            link: '/interview/written.md'
-          }
-        ]
-      }
-    ]
+    navbar: navbar,
+    sidebar: slidebar
   },
   plugins: [
     [

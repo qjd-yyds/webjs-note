@@ -1,8 +1,3 @@
----
-title: js面试题
-sidebar: 'auto'
----
-
 # javascript
 
 ## 数据类型

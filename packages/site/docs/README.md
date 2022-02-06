@@ -6,7 +6,7 @@ heroText: 修仙难！难于上青天！
 tagline: 筑基期、结丹期、元婴期、化神期、洞虚期、渡劫期
 actions:
   - text: 快速修仙
-    link: /interview/css
+    link: /web/javascript/object.md
     type: primary
 features:
   - title: 手撕笔试题
