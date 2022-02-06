@@ -48,6 +48,10 @@ export default defineUserConfig<DefaultThemeOptions>({
             link: '/interview/closure.md'
           },
           {
+            text: '深入理解js中的对象',
+            link: '/interview/object.md'
+          },
+          {
             text: '笔试题',
             link: '/interview/written.md'
           }
