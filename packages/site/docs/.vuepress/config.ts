@@ -28,6 +28,19 @@ export default defineUserConfig<DefaultThemeOptions>({
         align: 'bottom',
         successText: '复制成功！'
       }
+    ],
+    [
+      '@vuepress/docsearch',
+      {
+        apiKey: '<API_KEY>',
+        indexName: '<INDEX_NAME>',
+        placeholder: '搜索文档',
+        translations: {
+          button: {
+            buttonText: '搜索文档'
+          }
+        }
+      }
     ]
   ]
 });
